@@ -1,3 +1,5 @@
+using ExternalWhatsAppLibrary;
+
 namespace NotificationApp
 {
     internal class Program
@@ -29,6 +31,15 @@ namespace NotificationApp
                 "Er staat nieuwe feedback voor je klaar."
             );
 
+            // WhatsApp loopt via de adapter, maar voor de manager is dit
+            // gewoon weer een INotificationService zoals de andere kanalen.
+            manager.SetNotificationService(
+                new WhatsAppNotificationAdapter(new WhatsAppClient()));
+
+            manager.Send(
+                "0612345678",
+                "Je inschrijving is bevestigd."
+            );
 
             Console.ReadLine();
         }
