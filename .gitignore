@@ -1,0 +1,6 @@
+# Build-uitvoer en Visual Studio-bestanden
+bin/
+obj/
+.vs/
+*.user
+*.suo
