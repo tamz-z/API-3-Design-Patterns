@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObserverPattern.Interfaces
 {
+    // Subject: het object dat gevolgd wordt (de "uitgever" van de krant)
     internal interface Subject
     {
         void RegisterObserver(Observer o);

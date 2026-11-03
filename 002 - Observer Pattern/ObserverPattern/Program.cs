@@ -9,6 +9,7 @@ namespace ObserverPattern
         {
             WeatherData weatherData = new WeatherData();
 
+            // Open/closed: een nieuw display toevoegen kan zonder WeatherData aan te passen
             CurrentConditionDisplay currentConditionDisplay = new CurrentConditionDisplay(weatherData);
             ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
             StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
@@ -22,6 +23,7 @@ namespace ObserverPattern
             Console.WriteLine("\n--- Meting 3 ---");
             weatherData.SetMeasurements(30, 90, 29.2f);
 
+            // Afmelden tijdens het draaien: ForecastDisplay krijgt bij meting 4 niets meer
             Console.WriteLine("\n--- ForecastDisplay uitgeschreven ---");
             weatherData.RemoveObserver(forecastDisplay);
 

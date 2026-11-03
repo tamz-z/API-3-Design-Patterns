@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace ObserverPattern
 {
+    // IS-A: WeatherData is het Subject
     internal class WeatherData : Subject
     {
         // instance variables
+        // HAS-A: een lijst observers. Program to an interface: WeatherData kent geen concrete displays
+        // Encapsulation: private, de lijst verandert alleen via Register/Remove
         private List<Observer> observers;
         private float temperature;
         private float humidity;
@@ -20,6 +23,7 @@ namespace ObserverPattern
             observers = new List<Observer>();
         }
 
+        // Iedere aangemelde observer krijgt de nieuwe waardes
         public void NotifyObservers()
         {
             foreach (Observer o in observers)
@@ -28,6 +32,7 @@ namespace ObserverPattern
             }
         }
 
+        // Aanmelden; Contains voorkomt dat een observer dubbel wordt aangemeld
         public void RegisterObserver(Observer o)
         {
             if (!observers.Contains(o))
@@ -36,6 +41,7 @@ namespace ObserverPattern
             }
         }
 
+        // Afmelden: deze observer krijgt daarna geen updates meer
         public void RemoveObserver(Observer o)
         {
             if (observers.Contains(o))
@@ -64,6 +70,7 @@ namespace ObserverPattern
             NotifyObservers();
         }
 
+        // Nieuwe meting: state verandert, dus alle observers worden automatisch bijgewerkt
         public void SetMeasurements(float temperature, float humidity, float pressure)
         {
             this.temperature = temperature;
