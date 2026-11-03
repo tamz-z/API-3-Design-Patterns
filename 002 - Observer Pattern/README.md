@@ -33,6 +33,16 @@ Huidige condities: 28°C en 65% luchtvochtigheid.
 Voorspelling: Er is kans op onweer.
 Statistieken: gemiddelde 28,0°C / maximum 28°C / minimum 28°C (over 1 metingen).
 
+--- Meting 2 ---
+Huidige condities: 29°C en 70% luchtvochtigheid.
+Voorspelling: Er is kans op onweer.
+Statistieken: gemiddelde 28,5°C / maximum 29°C / minimum 28°C (over 2 metingen).
+
+--- Meting 3 ---
+Huidige condities: 30°C en 90% luchtvochtigheid.
+Voorspelling: Het gaat onweren!
+Statistieken: gemiddelde 29,0°C / maximum 30°C / minimum 28°C (over 3 metingen).
+
 --- ForecastDisplay uitgeschreven ---
 
 --- Meting 4 ---
