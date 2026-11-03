@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern.Ducks
 {
+    // IS-A (inheritance): MallardDuck is een Duck
     internal class MallardDuck : Duck
     {
         public MallardDuck()
-        {   
+        {
+            // Hier kiest de eend welke strategieën hij gebruikt
             quackBehavior = new RegularQuack();
             flyBehavior = new FlyWithWings();
             swimBehavior = new Swimming();

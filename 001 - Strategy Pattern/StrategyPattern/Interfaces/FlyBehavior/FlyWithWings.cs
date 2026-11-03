@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern.Interfaces.FlyBehavior
 {
+    // Concrete strategy: één manier van vliegen in een eigen class (encapsulation)
     internal class FlyWithWings : FlyBehavior
     {
         public void Fly()

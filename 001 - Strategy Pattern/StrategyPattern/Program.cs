@@ -8,6 +8,7 @@ namespace StrategyPattern
     {
         static void Main(string[] args)
         {
+            // Alle eenden als type Duck: de code werkt voor elke soort eend
             Duck mallardDuck = new MallardDuck();
             Duck redheadDuck = new RedheadDuck();
             Duck decoyDuck = new DecoyDuck();
