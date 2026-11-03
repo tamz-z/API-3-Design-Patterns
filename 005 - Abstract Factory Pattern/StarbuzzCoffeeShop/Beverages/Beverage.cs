@@ -12,12 +12,14 @@ namespace DecoratorPattern.Beverages
         GRANDE,
         VENDI
     }
+    // Component: abstracte basis voor dranken én extra's
     internal abstract class Beverage
     {
         public Size Size { get { return size; } set { size = value; } }
         private Size size;
 
         protected string description = "Unknown";
+        // HAS-A: het drankje dat een extra inpakt (blijft null bij een basisdrank)
         protected Beverage baseBeverage = null;
         
 

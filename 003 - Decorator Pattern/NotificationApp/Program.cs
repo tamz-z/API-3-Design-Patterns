@@ -12,6 +12,7 @@ namespace NotificationApp
             notification.Send("student@school.nl", "Je rooster is gewijzigd.");
 
             // Opdracht 2: logging met inheritance
+            // Probleem: voor elke combinatie een eigen class -> class explosion
             Console.WriteLine("--- Opdracht 2 ---");
             notification = new LoggedEmailNotificationService();
             notification.Send("student@school.nl", "Je rooster is gewijzigd.");
@@ -28,6 +29,7 @@ namespace NotificationApp
             notification.Send("0612345678", "Je rooster is gewijzigd.");
 
             // Opdracht 6: logging decorator met email en met sms
+            // Oplossing: inpakken (composition) in plaats van erven, één decorator werkt voor elke service
             Console.WriteLine("--- Opdracht 6 ---");
             notification = new EmailNotificationService();
             notification = new LoggingNotificationDecorator(notification);
@@ -56,6 +58,7 @@ namespace NotificationApp
             notification.Send("student@school.nl", "Je rooster is gewijzigd.");
 
             // Opdracht 9: variant B
+            // De volgorde van inpakken bepaalt de volgorde van uitvoeren (van buiten naar binnen)
             Console.WriteLine("--- Opdracht 9 variant B ---");
             notification =
                 new UrgentNotificationDecorator(

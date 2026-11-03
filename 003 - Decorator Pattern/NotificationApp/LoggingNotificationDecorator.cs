@@ -1,5 +1,6 @@
 namespace NotificationApp
 {
+    // Open/closed: nieuwe extra = nieuwe decorator, Email- en SmsNotificationService blijven ongewijzigd
     public class LoggingNotificationDecorator
         : NotificationDecorator
     {

@@ -1,5 +1,6 @@
 namespace NotificationApp
 {
+    // Single responsibility: deze decorator zet alleen [URGENT] voor het bericht
     public class UrgentNotificationDecorator
         : NotificationDecorator
     {

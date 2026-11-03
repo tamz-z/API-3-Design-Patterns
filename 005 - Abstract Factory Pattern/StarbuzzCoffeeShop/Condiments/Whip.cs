@@ -14,6 +14,7 @@ namespace DecoratorPattern.Condiments
             this.baseBeverage = beverage;
         }
 
+        // Eigen prijs + de prijs van wat erin zit
         public override double cost()
         {
             return 0.10 + baseBeverage.cost();
