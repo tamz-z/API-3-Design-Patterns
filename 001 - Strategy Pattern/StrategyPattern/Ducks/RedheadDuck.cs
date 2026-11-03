@@ -13,7 +13,7 @@ namespace StrategyPattern.Ducks
     {
         public RedheadDuck()
         {
-          quackBehavior = new RegularQuack();
+            quackBehavior = new RegularQuack();
             flyBehavior = new FlyWithWings();
             swimBehavior = new Swimming();
         }

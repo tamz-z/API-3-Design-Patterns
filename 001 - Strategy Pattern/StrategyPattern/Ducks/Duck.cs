@@ -6,9 +6,10 @@ namespace StrategyPattern.Ducks
 {
     internal abstract class Duck
     {
-        protected QuackBehavior quackBehavior;
-        protected FlyBehavior flyBehavior;
-        protected SwimBehavior swimBehavior;
+        // Nullable (?): de subclass zet het gedrag pas in zijn eigen constructor
+        protected QuackBehavior? quackBehavior;
+        protected FlyBehavior? flyBehavior;
+        protected SwimBehavior? swimBehavior;
 
         public abstract void Display();
 
