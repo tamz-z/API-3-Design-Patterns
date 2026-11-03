@@ -4,11 +4,12 @@ namespace GameApp
     {
         static void Main(string[] args)
         {
+            // Trim en ToLower, zodat ook "J" of " j " als ja telt
             Console.Write("Developer mode? (j/n): ");
-            bool developerMode = Console.ReadLine() == "j";
+            bool developerMode = Console.ReadLine()?.Trim().ToLower() == "j";
 
             Console.Write("Online spelen? (j/n): ");
-            bool online = Console.ReadLine() == "j";
+            bool online = Console.ReadLine()?.Trim().ToLower() == "j";
 
             GameFacade game = new GameFacade();
 
