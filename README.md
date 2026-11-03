@@ -5,14 +5,15 @@ Elke opdracht staat in een eigen map, met de patterns op volgorde van behandelin
 
 | Map | Pattern | Project | Wat zit erin | .NET |
 |---|---|---|---|---|
-| `001 - Strategy Pattern` | Strategy | `StrategyPattern` | Eenden met uitwisselbaar vlieg-, kwaak- en zwemgedrag (FlyBehavior, QuackBehavior, SwimBehavior), inclusief RobotDuck | 6.0 |
+| `001 - Strategy Pattern` | Strategy | `StrategyPattern` | Eenden met uitwisselbaar vlieg-, kwaak- en zwemgedrag (FlyBehavior, QuackBehavior, SwimBehavior), inclusief RobotDuck die tijdens het draaien van gedrag wisselt | 6.0 |
 | `002 - Observer Pattern` | Observer | `ObserverPattern` | Weerstation: `WeatherData` als Subject, drie displays als Observers (zie README in de map) | 8.0 |
 | `003 - Decorator Pattern` | Decorator | `NotificationApp` | Notificaties uitbreiden met Logging-, Urgent- en Timestamp-decorators; antwoorden staan in de README van het project | 8.0 |
 | `005 - Abstract Factory Pattern` | (Abstract) Factory Method | `StarbuzzCoffeeShop` | Starbuzz-koffiebar: dranken alleen te bestellen via `StarbuzzCoffeeShop` met de enum `CoffeeMix`, gebouwd op de decorators | 6.0 |
+| `006 - Singleton Pattern` | Singleton | `SingletonPattern` | Chocolate Factory: `ChocolateBoiler` als Singleton, thread safe met `MethodImplOptions.Synchronized` (antwoorden in `Antwoorden.md`) | 6.0 |
 | `007 - Adapter Pattern` | Adapter | `AdapterPattern` | `TurkeyAdapter` en `GooseAdapter` laten een kalkoen en een gans zich gedragen als een eend | 6.0 |
 | `007 - Adapter Pattern` | Adapter | `NotificationApp` | `WhatsAppNotificationAdapter` koppelt een externe WhatsApp-library aan `INotificationService` | 8.0 |
 | `008 - Facade Pattern` | Facade | `GameApp` | Startopdracht: `GameFacade` start en stopt alle subsystemen van een game (antwoorden in `GameApp/Antwoorden.md`) | 10.0 |
-| `008 - Facade Pattern` | Facade | `FacadePattern` | Home Theater met `HomeTheaterFacade` en de opdracht over het Principle of Least Knowledge (antwoorden in `Antwoorden.md`) | 6.0 |
+| `008 - Facade Pattern` | Facade | `FacadePattern` | Home Theater met `HomeTheaterFacade` (film kijken, CD en radio luisteren) en de opdracht over het Principle of Least Knowledge (antwoorden in `Antwoorden.md`) | 6.0 |
 
 ## Uitvoeren
 
