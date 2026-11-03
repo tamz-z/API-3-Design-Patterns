@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +8,7 @@ namespace Singleton
 {
     internal class ChocolateBoiler
     {
+        private static ChocolateBoiler? uniqueInstance;
         private bool empty;
         private bool boiled;
 
@@ -15,10 +16,18 @@ namespace Singleton
         public bool IsBoiled { get { return this.boiled; } }
 
         // This code is only started when the boiler is empty
-        public ChocolateBoiler()
+        private ChocolateBoiler()
         {
             empty = true;
             boiled = false;
+        }
+        public static ChocolateBoiler GetInstance()
+        {
+            if(uniqueInstance == null)
+            {
+                uniqueInstance = new ChocolateBoiler();
+            }
+            return uniqueInstance;
         }
         // To fill the boiler it must be empty and once it is full, we set the empty and boiled flag
         public void fill()
