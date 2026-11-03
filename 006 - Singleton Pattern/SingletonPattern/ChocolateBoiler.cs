@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,6 +22,7 @@ namespace Singleton
             empty = true;
             boiled = false;
         }
+        [MethodImpl(MethodImplOptions.Synchronized)]
         public static ChocolateBoiler GetInstance()
         {
             if(uniqueInstance == null)
