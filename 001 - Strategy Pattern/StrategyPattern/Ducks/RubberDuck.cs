@@ -13,8 +13,9 @@ namespace StrategyPattern.Ducks
     {
         public RubberDuck()
         {
-            quackBehavior = new RegularQuack();
-            flyBehavior = new FlyWithWings();
+            // Een rubber eend piept en kan niet vliegen
+            quackBehavior = new Squeak();
+            flyBehavior = new FlyNoWay();
             swimBehavior = new Floating();
         }
         public override void Display()

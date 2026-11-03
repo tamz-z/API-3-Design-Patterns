@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern.Interfaces.QuackBehavior
 {
-    internal class Squick : QuackBehavior
+    internal class Squeak : QuackBehavior
     {
         public void Quack()
         {
-            Console.WriteLine("Squick");
+            Console.WriteLine("Squeak");
         }
     }
 }

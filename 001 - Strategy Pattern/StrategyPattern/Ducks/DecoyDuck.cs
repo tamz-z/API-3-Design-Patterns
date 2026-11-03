@@ -13,9 +13,10 @@ namespace StrategyPattern.Ducks
     {
         public DecoyDuck()
         {
-            quackBehavior = new RegularQuack();
+            // Een houten lokeend maakt geen geluid, kan niet vliegen, maar blijft wel drijven
+            quackBehavior = new MuteQuack();
             flyBehavior = new FlyNoWay();
-            swimBehavior = new Drowning();
+            swimBehavior = new Floating();
         }
         public override void Display()
         {
