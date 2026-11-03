@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 namespace FacadePattern
 {
     // Facade: één simpele interface voor het hele home theater subsysteem
+    // Encapsulation: de client hoeft niet te weten welke stappen erachter zitten
+    // Principle of Least Knowledge: de client praat alleen met de Facade
+    // De subsystemen blijven ook los bruikbaar: de Facade versimpelt, hij sluit niets af
     internal class HomeTheaterFacade
     {
         // HAS-A relatie met alle subsystemen
@@ -33,6 +36,7 @@ namespace FacadePattern
             _popcornPopper = popcornPopper;
         }
 
+        // Eén aanroep vervangt alle losse stappen uit de slides
         public void WatchMovie(string movie)
         {
             Console.WriteLine("--- Film starten ---");
@@ -76,6 +80,7 @@ namespace FacadePattern
             _dvdPlayer.Off();
         }
 
+        // Dezelfde subsystemen, andere combinatie: CD en radio uit het class diagram
         public void ListenToCd()
         {
             Console.WriteLine("--- CD luisteren ---");

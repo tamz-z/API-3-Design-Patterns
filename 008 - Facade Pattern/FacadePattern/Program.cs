@@ -17,6 +17,7 @@ namespace FacadePattern
             HomeTheaterFacade homeTheater = new HomeTheaterFacade(amp, tuner, dvdPlayer, cdPlayer,
                                                                   projector, screen, lights, popcornPopper);
 
+            // Client: kent alleen de Facade, niet de stappen erachter
             // Versimpelde methodes gebruiken om een film te starten en te stoppen
             homeTheater.WatchMovie("Die Hard");
             Console.WriteLine();
